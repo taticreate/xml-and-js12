@@ -53,18 +53,18 @@ const renderTable = (data, userTerm) => {
       tableBody.innerHTML = rows;
     };
     
-    loadData(`./data/MOCK_DATA.json`).then((data) => renderTable(data));
+    loadData(`./MOCK_DATA.json`).then((data) => renderTable(data));
 
     const onSubmit = (event) => {
       event.preventDefault();
     
       const term = event.target.username.value;
     
-      loadData(`./data/MOCK_DATA.json`).then((data) => renderTable(data, term));
+      loadData(`./MOCK_DATA.json`).then((data) => renderTable(data, term));
     };
     
     const onReset = () => {
-      loadData(`./data/MOCK_DATA.json`).then((data) => renderTable(data));
+      loadData(`./MOCK_DATA.json`).then((data) => renderTable(data));
     };
     
     },{}]},{},[1]);
