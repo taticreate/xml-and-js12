@@ -4,7 +4,12 @@
   </head>
   <body>
     <form onsubmit="onSubmit(event)" onreset="onReset()">
-      <select name="language-search" id="language-search"></select>
+      
+      <select id="language-search" name="language-search" onchange="show(this)">
+        <option value="">-- Select --</option>
+    </select>
+
+
       <input
         type="text"
         name="username"
@@ -24,9 +29,9 @@
           <th>Gender</th>
           <th>Ip Address</th>
           <th>City</th>
-          <th>Language</th>
+          <th>Language</th> // dropdown
           <th>Username</th>
-          <th>Department</th>
+          <th>Department</th> // checkbox
         </tr>
       </thead>
       <tbody id="table-body"></tbody>
