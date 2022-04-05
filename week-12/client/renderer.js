@@ -18,6 +18,7 @@ const renderTable = (data, userTerm) => {
   }
 
   let source = data;
+  let langdrop = document.getElementById('language-search');
 
   if (userTerm) {
     source = source.filter(({ username }) => username.toLowerCase().includes(userTerm));
