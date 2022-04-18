@@ -338,8 +338,8 @@ window.onSubmit = (event) => {
 	const country= event.target.country.value;
     const email= event.target.email.value;
 
-	getAll().then(({ data }) =>
-		renderTable(data, id, name, city, country, email)
+	getAll({id, name, city, country, email}).then(({ data }) =>
+		renderTable(data)
 	);
 };
 
