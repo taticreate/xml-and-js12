@@ -16,7 +16,7 @@ const getAll = ({id, name, city, country, } = {}) =>
 		if (country) {
 			result = result.filter((obj) => obj.country === country);
 		}
-        if (email) {
+                if (email) {
 			result = result.filter((obj) => obj.email.toLowerCase().includes(email));
         }
         
