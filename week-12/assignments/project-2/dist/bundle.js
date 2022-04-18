@@ -305,7 +305,7 @@ const renderTable = (data, nameTerm) => {
 	let source = data;
 
 	if (nameTerm) {
-		source = source.filter(({ name }) => name.toLowerCase().includes(nameTerm.toLowerCase()));
+		source = source.filter(({ name }) => name.toLowerCase().includes(nameTerm));
 		
 	}
 
@@ -334,10 +334,10 @@ window.onSubmit = (event) => {
 	event.preventDefault();
 
 	const id = event.target.id.value;
-	const name = event.target.name.value;
-	const city = event.target.city.value;
-	const country= event.target.country.value;
-    const email= event.target.email.value;
+	const name = event.target.name.value.toLowerCase();
+	const city = event.target.city.value.toLowerCase();
+	const country= event.target.country.value.toLowerCase();
+    const email= event.target.email.value.toLowerCase();
 
 	getAll({id, name, city, country, email}).then(({ data }) =>
 		renderTable(data)
