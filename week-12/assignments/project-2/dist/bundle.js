@@ -11,10 +11,10 @@ const getAll = ({id, name, city, country,email} = {}) =>
 			result = result.filter((obj) => obj.name.toLowerCase().includes(name));
 		}
 		if (city) {
-			result = result.filter((obj) => obj.city === city);
+			result = result.filter((obj) => obj.city.toLowerCase().includes(city));
 		}
 		if (country) {
-			result = result.filter((obj) => obj.country === country);
+			result = result.filter((obj) => obj.country.toLowerCase().includes(country));
 		}
                 if (email) {
 			result = result.filter((obj) => obj.email.toLowerCase().includes(email));
