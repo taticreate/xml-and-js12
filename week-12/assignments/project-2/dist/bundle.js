@@ -305,7 +305,7 @@ const renderTable = (data, nameTerm) => {
 	let source = data;
 
 	if (nameTerm) {
-		source = source.filter(({ name }) => name.toLowerCase().includes(nameTerm));
+		source = source.filter(({ name }) => name.toLowerCase().includes(nameTerm.toLowerCase()));
 		
 	}
 
