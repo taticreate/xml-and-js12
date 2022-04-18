@@ -5,7 +5,7 @@ const getAll = ({id, name, city, country,email} = {}) =>
 	new Promise((resolve) => {
 		let result = Array.from(companies);
 		if (id) {
-			result = result.filter((obj) => obj.id === parseInt(data.id));
+			result = result.filter((obj) => obj.id === parseInt(id));
 		}
 		if (name) {
 			result = result.filter((obj) => obj.name.toLowerCase().includes(name));
